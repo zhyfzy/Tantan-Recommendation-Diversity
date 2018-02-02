@@ -119,9 +119,18 @@ def iter_test():
             del a[i]
     print(a)
 
+def test_for_in():
+    a = {1:2, 2:3}
+
+    # 这是错误的做法
+    #for (i,[j,k]) in a:
+    #    print(i,j,k)
+
+    for (i, j) in a.items():
+        print(i,j)
 
 def main():
-    iter_test()
+    test_for_in()
 
 if __name__ == "__main__":
     main()

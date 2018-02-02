@@ -25,12 +25,14 @@ def from_file(filename):
             l += 1
             num = int(row[1])
             ans += (num * num - num)//2
-    print(ans/20/(l*(l-1)//2))
+    print(str(-ans/20/(l*(l-1)//2)) + ",")
 
 
 def main():
     # 对每个文件进行扫描
-    from_file("output/Rerank_popularity_0_20.csv")
+    for i in range(10,-1,-1):
+        #print(i)
+        from_file("output/Rerank-relative-like/rerank_relative_like_"+str(i)+"_20.csv")
 
 
 if __name__ == "__main__":
