@@ -1,10 +1,9 @@
 """
 前20个推荐中，男性用户被推荐的统计
+过滤掉了给同一个用户重复的推荐
 
 将数据按照时间排序
-然后取前20个作为推荐备选
-
-其前10个为系统推荐
+统计前10个中各个物品被推荐的次数
 
 这个项目的目标是：对20个推荐备选重新排序，使得前10个推荐的多样性上升
 """
@@ -39,7 +38,6 @@ def end_parse_male_statistic():
     draw_plot([item[1] for item in sorted_data])
 
 
-
 def filter(data):
     males = []
     filtered = []
@@ -61,7 +59,7 @@ def get_data(file_name):
                 # record data
                 if last_row_id != "-1":
                     row_list = sorted(row_list, key=lambda x:int(x[4]))
-                    filtered = filter(row_list)[:TOP_N]
+                    filtered = filter(row_list)[:TOP_N] # 取前TOP_N个
                     if len(filtered) == TOP_N:
                         parse(filtered)
 

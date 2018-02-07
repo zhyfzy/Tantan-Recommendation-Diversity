@@ -1,3 +1,8 @@
+"""
+绘制不同T_R条件下，用户被推荐次数的变化。
+实际的图片中可以看到，T_R越小，长尾效应就越得到改善
+"""
+
 import csv
 import matplotlib.pyplot as plt
 

@@ -1,5 +1,6 @@
 """
-绘制最终的图表
+绘制最终的图表，不同的排序方法效果对比
+横轴是多样性，纵轴是准确度
 """
 import matplotlib.pyplot as plt
 

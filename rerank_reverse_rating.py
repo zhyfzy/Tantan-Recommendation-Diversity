@@ -1,5 +1,6 @@
 """
 使用Re-Rank方法提高多样性
+依照物品的rating从小到大排序
 """
 import csv
 import os

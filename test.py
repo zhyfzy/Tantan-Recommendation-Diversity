@@ -1,9 +1,11 @@
+"""
+测试用，参考就好
+"""
 import pandas as pd
 import numpy as np
 import csv
 import os
 import matplotlib.pyplot as plt
-import math
 
 
 def dict_construct():
@@ -108,11 +110,16 @@ def parameter_test(data):
 
 x = 3
 def global_test():
-    global x
+    global x # 显式的全局变量声明
     x = x + 1 # 4
 
 
 def iter_test():
+    """
+    测试如何在for循环中删除一个元素，下边代码返回错误：
+        if a[i] == 2:
+        IndexError: list index out of range
+    """
     a = [1,2,2,4]
     for i in range(len(a)):
         if a[i] == 2:
@@ -130,7 +137,7 @@ def test_for_in():
         print(i,j)
 
 def main():
-    test_for_in()
+    iter_test()
 
 if __name__ == "__main__":
     main()
